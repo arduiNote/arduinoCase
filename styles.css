@@ -1,0 +1,146 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f6fb;
+  color: #1b1f2a;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #495066;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 6px 18px rgba(13, 20, 35, 0.08);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #d7dbe8;
+  font-size: 1rem;
+}
+
+.timer-row {
+  margin: 1rem 0;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.active-task {
+  margin: 0.25rem 0 0;
+  color: #495066;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-weight: 600;
+  background: #e7eaf4;
+  color: #182039;
+}
+
+button.primary {
+  background: #4455f7;
+  color: white;
+}
+
+button.danger {
+  background: #ffe5e9;
+  color: #a6303f;
+}
+
+button:disabled {
+  opacity: 0.45;
+}
+
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.booking-item {
+  border: 1px solid #e2e6f3;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.booking-task {
+  margin: 0;
+  font-weight: 600;
+}
+
+.booking-meta {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: #495066;
+}
+
+.booking-duration {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .timer {
+    font-size: 2.25rem;
+  }
+
+  .button-row {
+    grid-template-columns: 1fr;
+  }
+}
