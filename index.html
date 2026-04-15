@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Timer Booker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Task Timer Booker</h1>
+      <p class="subtitle">A stopwatch for timing and booking specific tasks.</p>
+
+      <section class="card">
+        <label for="taskName">Task name</label>
+        <input id="taskName" type="text" placeholder="e.g., Emails, Design review" />
+
+        <div class="timer-row">
+          <p id="timerDisplay" class="timer">00:00:00</p>
+          <p id="activeTask" class="active-task">No active task</p>
+        </div>
+
+        <div class="button-row">
+          <button id="startBtn" class="primary">Start task</button>
+          <button id="stopBtn" disabled>Stop & book</button>
+          <button id="resetBtn">Reset timer</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="bookings-header">
+          <h2>Booked tasks</h2>
+          <button id="clearBtn" class="danger">Clear all</button>
+        </div>
+        <ul id="bookingsList" class="bookings-list"></ul>
+      </section>
+    </main>
+
+    <template id="bookingTemplate">
+      <li class="booking-item">
+        <div>
+          <p class="booking-task"></p>
+          <p class="booking-meta"></p>
+        </div>
+        <p class="booking-duration"></p>
+      </li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
